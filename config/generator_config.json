@@ -1,0 +1,118 @@
+{
+  "generation": {
+    "total_nfts": 100,
+    "frames_per_animation": 24,
+    "dimensions": {
+      "width": 1200,
+      "height": 1200
+    },
+    "upscaling": "nearest_neighbour",
+    "frame_rate": 10,
+    "output_format": "gif",
+    "batch_size": 100,
+    "max_concurrent": 4,
+    "resume_from": null
+  },
+  "metadata": {
+    "_note": "Metadata will be generated in BOTH Ethereum (ERC-721) and Solana (Metaplex) formats in separate folders",
+    
+    "_comment_common": "=== COMMON FIELDS (used by both Ethereum and Solana) ===",
+    "name_prefix": "name",
+    "description": "description",
+    "external_url": "https://example.com",
+    "image_base_uri": "https://example.com/images/",
+    "animation_base_uri": "https://example.com/animations/",
+    "background_color": "000000",
+    
+    "_comment_ethereum": "=== ETHEREUM FIELDS (ERC-721 standard) ===",
+    "_comment_ethereum_note": "Ethereum metadata uses common fields above + standard ERC-721 attributes",
+    
+    "_comment_solana": "=== SOLANA FIELDS (Metaplex standard) ===",
+    "solana": {
+      "symbol": "test",
+      "seller_fee_basis_points": 500,
+      "collection": {
+        "name": "test",
+        "family": "test"
+      },
+      "properties": {
+        "files": [
+          {
+            "uri": "https://example.com/images/",
+            "type": "image/png"
+          },
+          {
+            "uri": "https://example.com/animations/",
+            "type": "image/gif"
+          }
+        ],
+        "category": "image",
+        "creators": [
+          {
+            "address": "11111111111111111111111111111111111111111111",
+            "share": 100,
+            "verified": true
+          }
+        ]
+      }
+    }
+  },
+  "performance": {
+    "worker_threads": true,
+    "gpu_acceleration": "auto",
+    "memory_limit": "16GB",
+    "cpu_cores": "auto"
+  },
+  "animation": {
+    "loop_count": 0,
+    "optimization": "high",
+    "color_palette": "auto",
+    "dithering": true 
+  },
+  "trait_processing_order": [
+    "Background",
+    "Body",
+    "Clothes",
+    "Tasteful Necklaces",
+    "Eyes",
+    "Beard",
+    "Eyebrows",
+    "Head",
+    "Glasses",
+    "Prop"
+  ],
+  "incompatible_traits": {
+    "winter clothing": [ "summer hat", "gloves" ],
+    "Springy Glasses": [ "Egg and Spoon Race", "One Tooth But A Big One" ]
+  },
+  "forced_pairings": {
+    "winter clothing": ["winter hat", "gloves"],
+    "formal wear": ["bowler hat", "tie"]
+  },
+  
+  "dependent_traits": {
+    "crown": "royal cape",
+    "wizard hat": "magic staff",
+    "swimming trunks": "beach background"
+  },
+  "exclusive_groups": {
+    "hats": ["bowler", "baseball cap", "beanie", "none"],
+    "shoes": ["sneakers", "boots", "sandals", "none"],
+    "accessories": ["glasses", "sunglasses", "none"]
+  },
+  "conditional_rarity": {
+    "gold background": {
+      "diamond accessories": 0.1,
+      "platinum accessories": 0.05
+    },
+    "winter clothing": {
+      "summer hats": 0.0
+    }
+  },
+  "validation": {
+    "strict_mode": true,
+    "validate_images": true,
+    "check_duplicates": true,
+    "max_retries": 3
+  }
+}
