@@ -1,6 +1,21 @@
 ## Animated NFT Generator (Node.js + TypeScript)
 
-Fast, configurable animated NFT generator with weighted traits, direct per-frame compositing, and GIF/MP4 assembly via FFmpeg. Includes rarity analysis and dual metadata output (both Ethereum ERC-721 and Solana Metaplex formats).
+Fast, configurable clanker-built animated NFT generator with weighted traits, direct per-frame compositing, and GIF/MP4 assembly via FFmpeg. Includes rarity analysis and dual metadata output (both Ethereum ERC-721 and Solana Metaplex formats). 
+
+### Quickstart/tldr
+
+```bash
+git clone https://github.com/Miceprincipal/AnimatedNftMaker.git
+cd AnimatedNftMaker
+npm install
+npm run build
+npm run generate
+```
+
+`config/generator_config.json` – main configuration file for settings and layer order, metadata fields and compatibilities/incompatibilities. 
+Automatically outputs folders of Eth and Sol metadata. 
+Weights in end of folder names /example(#20)/*.png. Number frames for animated layer in order from low to high, single frame will be looped as static. Layers without enough frames to complete length of gif will be looped automatically.
+Will hunt to bottom folder layer of tree following folder weights so you can use middleman folders branch things like genders, yes/no trait, with rarity rerolling cleanly each step down to avoid nerdmath.
 
 ### Requirements
 - Node.js 18+ and npm
@@ -9,13 +24,10 @@ Fast, configurable animated NFT generator with weighted traits, direct per-frame
   - macOS (brew): `brew install ffmpeg`
   - Linux (apt): `sudo apt-get install ffmpeg`
 
-Optional (auto-detected): GPU acceleration via FFmpeg `-hwaccel auto` if available
 
-### Install
-```bash
-npm install
-npm run build
-```
+### Long version
+
+Optional (auto-detected): GPU acceleration via FFmpeg `-hwaccel auto` if available
 
 ### Project Structure (high-level)
 - `config/generator_config.json` – main configuration (see below)
@@ -163,4 +175,5 @@ Solana (Metaplex)
 
 ### License
 MIT
+
 
