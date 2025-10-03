@@ -30,7 +30,7 @@
     "_comment_solana": "=== SOLANA FIELDS (Metaplex standard) ===",
     "solana": {
       "symbol": "test",
-      "seller_fee_basis_points": 500,
+      "seller_fee_basis_points": 000,
       "collection": {
         "name": "test",
         "family": "test"
