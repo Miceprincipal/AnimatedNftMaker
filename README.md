@@ -13,8 +13,11 @@ npm run generate
 ```
 
 `config/generator_config.json` – main configuration file for settings and layer order, metadata fields and compatibilities/incompatibilities. 
+
 Automatically outputs folders of Eth and Sol metadata. 
+
 Weights in end of folder names /example(#20)/*.png. Number frames for animated layer in order from low to high, single frame will be looped as static. Layers without enough frames to complete length of gif will be looped automatically.
+
 Will hunt to bottom folder layer of tree following folder weights so you can use middleman folders branch things like genders, yes/no trait, with rarity rerolling cleanly each step down to avoid nerdmath.
 
 ### Requirements
@@ -175,5 +178,6 @@ Solana (Metaplex)
 
 ### License
 MIT
+
 
 
