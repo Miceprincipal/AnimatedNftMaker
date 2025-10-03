@@ -60,7 +60,7 @@
   "performance": {
     "worker_threads": true,
     "gpu_acceleration": "auto",
-    "memory_limit": "16GB",
+    "memory_limit": "4GB",
     "cpu_cores": "auto"
   },
   "animation": {
